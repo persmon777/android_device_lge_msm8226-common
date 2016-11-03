@@ -71,4 +71,3 @@ const char CameraParameters::KEY_QC_ZSL[] = "zsl";
     static const char AUTO_HDR_SUPPORTED[]; \
     static const char KEY_QC_SUPPORTED_AE_BRACKETING_MODES[]; \
     static const char KEY_QC_ZSL[];
-
