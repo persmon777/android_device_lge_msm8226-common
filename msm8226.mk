@@ -194,6 +194,9 @@ PRODUCT_COPY_FILES += \
 NFCEE_ACCESS_PATH := $(LOCAL_PATH)/prebuilt/etc/nfcee_access.xml
 endif
 
+# Imgdiff
+PRODUCT_PACKAGES := imgdiff
+
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
