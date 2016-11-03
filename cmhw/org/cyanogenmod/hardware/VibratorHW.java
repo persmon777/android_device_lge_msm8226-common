@@ -16,9 +16,8 @@
 
 package org.cyanogenmod.hardware;
 
-import java.io.File;
 import java.util.Scanner;
-import org.cyanogenmod.hardware.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 public class VibratorHW {
 
@@ -27,17 +26,7 @@ public class VibratorHW {
     private static int control_type;
 
     public static boolean isSupported() {
-        File t = new File(TSPDRV_NFORCE_PATH);
-        File q = new File(QPNP_NFORCE_PATH);
-        if (t.exists()) {
-                control_type = 1;
-                return true;
-        } else if (q.exists()) {
-                control_type = 2;
-                return true;
-        } else {
-                return false;
-        }
+    return FileUtils.isFileWritable(NFORCE_PATH);
     }
 
     public static int getMaxIntensity()  {

@@ -16,9 +16,8 @@
 
 package org.cyanogenmod.hardware;
 
-import java.io.File;
 import java.util.Scanner;
-import org.cyanogenmod.hardware.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 public class DisplayColorCalibration {
     private static final String COLOR_FILE = "/sys/class/graphics/fb0/rgb";
@@ -26,18 +25,7 @@ public class DisplayColorCalibration {
     private static int control_type;
 
     public static boolean isSupported() {
-        File f = new File(COLOR_FILE);
-        File k = new File(KCAL_FILE);
-
-        if (f.exists()) {
-                control_type = 1;
-                return true;
-        } else if (k.exists()) {
-                control_type = 2;
-                return true;
-        } else {
-                return false;
-        }
+    return FileUtils.isFileWritable(COLOR_FILE);
 
     }
 
