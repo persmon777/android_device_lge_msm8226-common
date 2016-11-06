@@ -167,7 +167,26 @@ TARGET_HW_DISK_ENCRYPTION := false
 
 # SELinux policies
 # qcom sepolicy
-# include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 
-# BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+
+# TWRP Recovery
+RECOVERY_FSTAB_VERSION := 2
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_FLASH_FROM_STORAGE := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_RECOVERY_SWIPE := true
+BOARD_SUPPRESS_EMMC_WIPE := true
+RECOVERY_SDCARD_ON_DATA := true
+HAVE_SELINUX := true
+BOARD_HAS_NO_MISC_PARTITION := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_THEME := portrait_xhdpi
+TW_INCLUDE_L_CRYPTO := true
 

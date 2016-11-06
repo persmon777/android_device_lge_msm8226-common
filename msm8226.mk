@@ -197,6 +197,11 @@ endif
 # Imgdiff
 PRODUCT_PACKAGES := imgdiff
 
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+
+
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
