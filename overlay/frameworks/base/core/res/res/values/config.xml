@@ -337,7 +337,7 @@
         <item>"ehrpd:4094,87380,1048576,4096,16384,262144"</item>
     </string-array>
 
-+    <!-- Control the behavior when the user long presses the home button.
+    <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Recent apps view in SystemUI
             2 - Launch assist intent
